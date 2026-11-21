@@ -1,20 +1,21 @@
-# Arta - Your Private Art Curator
+# [Artsy](https://pamaral-git.github.io/artsy/)
 
-Arta (Romanian word for "the art") is your personal, private, and local hosted art curator. Architectured on top of my own artistic experience, it's structured around the idea of a taste model that connects across art forms, substance, impact, and patterns.
+Artsy is a single-file web app `.html` that acts as your out of the box personal art curator. Always Live. No Account or API Keys. Completely Free, Open Source and Private by design.
 
-Taste is seen not as a list of likes but a pattern of unyielding attention with its own cultural traces, history, memory, and behaviour. Not a recommendation engine. But a private curator that guides you even when it means steering away from your places of comfort.
+## Quick-start
+- 🌐 Start by Simply Interacting with [`index.html`](https://pamaral-git.github.io/artsy/), *or*;
+- 🧭 Download [Artsy](https://github.com/pamaral-git/artsy/archive/refs/heads/main.zip) and open the `index.html` in any browser.
 
-This is meant to be a multi-agentic system with a local reasoning layer for: _Taste_ (for Retrieval Augmented Generation), _Resonance_ (axioms and themes that resonate with you), _Intersectionality_ (a film relates to a poem or song or painting or performance, …) and _Curator-Guide_ (selection and analysis of artworks). But this shouldn't come at the cost of your own privacy. So everything is done privately, locally, or in a Docker-ephemeral environment by default.
+*Everything always stays on your Browser Local Storage (except when you use External Discovery APIs).*
 
-## Pre-Release Version 0.0.1
+**Web App Walkthrough:**
+- **Home**: Browse the entire literary catalog (+200 Artworks).
+- **Stream**: Editorial picks of literary broadcasts and Spoken Word.
+- **Social**: Follow any literary social media feed (Favorites: [🇵🇹 PORT](https://www.instagram.com/opoemaensinaacair) | [🗺️ ENG](https://havingapoemwithyou.tumblr.com/)).
+- **Studio**: Add Any New Artworks. Import Text from Images. Create Your own Read-alouds.
 
-The Minimal Viable Product now focuses on just being a place for literary discovery and curation, with unconsumed poetry masterworks defined by necessity, illusions, the existential, loss, transcendence, and being human.
-
-Sources of the Pre-Release Version curation span years, but the core sources for this version were [Poetry Foundation](https://www.poetryfoundation.org), [Having a Poem with You](https://havingapoemwithyou.tumblr.com), and [Rádio e Televisão de Portugal](https://www.rtp.pt/play). With credits also to [impeccable](https://github.com/pbakaus/impeccable).
-
-* **Multimodal**: Spoken-word performance inline video alongside the text.
-* **Pre-Built Page**: Visit the page or download locally (Zero dependencies, runtime, or other steps).
-* **Self-Hosted**: Create your own custom curated version inside Docker/self-hosted.
-    1. Pull & Sync - Use [`pull-art.gs`](pull-art.gs) (Google Apps Script) to pull YouTube playlist metadata into Google Sheets and export `poetry_archive.csv`.
-    2. Ingest - Run [`scripts/sync_art.py`](scripts/sync_art.py) to convert the CSV into `data/art_dataset.json`.
-    3. Launch with Docker: `cd docker` then `docker-compose up -d` and finally open `http://localhost:8080`.
+Artsy stands on the shoulders of giants and wouldn't be possible without a combination of:
+ - **Authors/Creators**: @opoemaensinaacair, @ourspoetica, @ahcravo, @havingapoemwithyou, Edições Valentim de Carvalho, Poets.org, Poetryfoundation.org, RTP, Imprensa.
+ - **Discovery**: api.artic.edu, Met Museum, Gutendex, OpenBookRank, PoetryDB, r.jina.ai, [@tavily-ai](https://github.com/tavily-ai), [@yt-dlp](https://github.com/yt-dlp).
+ - **AI-Models**: Indra-ocr by [@datalab-to](https://github.com/datalab-to), Tesseract.js by [@naptha](https://github.com/naptha), Phonon-40m by [@gradium-ai](https://github.com/gradium-ai), Soprano 1.1 by [@ekwek1](https://github.com/ekwek1), ONNX WASM (inference).
+ - **Platforms**: Instagram, Tumblr, YouTube (Piped playback), HuggingFace.
